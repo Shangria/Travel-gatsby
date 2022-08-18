@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import {Link} from 'gatsby';
 
+import { baseTheme } from './styles/theme'
+
 export const Button = styled(Link)`
-  background: ${({primary}) => (primary ? '#92b2d3' : '#b3c9df')};
+  background: ${({primary}) => (primary ? baseTheme.colors.bg : baseTheme.colors.secondary)};
   padding: ${({big}) => (big ? '15px 40px' : '10px 30px')};
-  color: #e5e0fa;
-  font-size:${({big}) => (big ? '25px' : '18px')}; 
+  color: ${baseTheme.colors.five};
+  font-size:${({big}) => (big ? 'calc(0.7rem + 1vw)' : '18px')}; 
   outline: none;
   border: none;
   min-width: 100px;
@@ -15,8 +17,8 @@ export const Button = styled(Link)`
   border-radius: ${({round}) => (round ? '50px' : 'none')}; 
   
   :hover{
-    background: ${({primary}) => (primary ?  '#b3c9df':'#92b2d3')};
+    background: ${({primary}) => (primary ?  baseTheme.colors.secondary : baseTheme.colors.bg )};
     transform: translateY(-2px);
-    color: white;
+    color:  ${baseTheme.colors.light};
   }
 `

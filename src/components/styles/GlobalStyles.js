@@ -6,6 +6,7 @@ export const GlobalStyles=createGlobalStyle`
   *::after {
     box-sizing: border-box;
     font-family: 'DynaPuff';
+    line-height: 1.3;
   }
   
   html{
@@ -55,6 +56,7 @@ export const GlobalStyles=createGlobalStyle`
   img {
     max-width: 100%;
     display: block;
+    border-radius: 10px;
   }
   
   article > * + * {
@@ -67,4 +69,5 @@ export const GlobalStyles=createGlobalStyle`
   select {
     font: inherit;
   }
+  
 `

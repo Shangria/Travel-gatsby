@@ -1,0 +1,62 @@
+[
+  {
+    "picture": "../assets/images/travel-1.jpg",
+    "alt": "London",
+    "name": "London"
+  },
+  {
+    "picture": "../assets/images/travel-2.jpg",
+    "alt": "Berlin",
+    "name": "Berlin"
+  },
+  {
+    "picture": "../assets/images/travel-3.jpg",
+    "alt": "Madrid",
+    "name": "Madrid"
+  },
+  {
+    "picture": "../assets/images/travel-4.jpg",
+    "alt": "Kyiv",
+    "name": "Kyiv"
+  },
+  {
+    "picture": "../assets/images/travel-5.jpg",
+    "alt": "Rome",
+    "name": "Rome"
+  },
+  {
+    "picture": "../assets/images/travel-6.jpg",
+    "alt": "Warsaw",
+    "name": "Warsaw"
+  },
+  {
+    "picture": "../assets/images/travel-7.jpg",
+    "alt": "Budapest",
+    "name": "Budapest"
+  },
+  {
+    "picture": "../assets/images/travel-8.jpg",
+    "alt": "Tbilisi",
+    "name": "Tbilisi"
+  },
+  {
+    "picture": "../assets/images/travel-9.jpg",
+    "alt": "Stockholm",
+    "name": "Stockholm"
+  },
+  {
+    "picture": "../assets/images/travel-10.jpg",
+    "alt": "Naples",
+    "name": "Naples"
+  },
+  {
+    "picture": "../assets/images/travel-11.jpg",
+    "alt": "Riga",
+    "name": "Riga"
+  },
+  {
+    "picture": "../assets/images/travel-12.jpg",
+    "alt": "Zaragoza",
+    "name": "Zaragoza"
+  }
+]
