@@ -1,62 +1,86 @@
 [
   {
+    "id": "1",
     "picture": "../assets/images/travel-1.jpg",
     "alt": "London",
-    "name": "London"
+    "name": "London",
+    "description": "London is the capital and largest city of England and the United Kingdom"
   },
   {
+    "id": "2",
     "picture": "../assets/images/travel-2.jpg",
     "alt": "Berlin",
-    "name": "Berlin"
+    "name": "Berlin",
+    "description": "Berlin is the capital and largest city of Germany by both area and population."
   },
   {
+    "id": "3",
     "picture": "../assets/images/travel-3.jpg",
     "alt": "Madrid",
-    "name": "Madrid"
+    "name": "Madrid",
+    "description": "Madrid is the capital and most populous city of Spain."
   },
   {
+    "id": "4",
     "picture": "../assets/images/travel-4.jpg",
     "alt": "Kyiv",
-    "name": "Kyiv"
+    "name": "Kyiv",
+    "description": "Kyiv or Kiev is the capital and most populous city of Ukraine."
   },
   {
+    "id": "5",
     "picture": "../assets/images/travel-5.jpg",
     "alt": "Rome",
-    "name": "Rome"
+    "name": "Rome",
+    "description": "Rome is the capital city of Italy."
   },
   {
+    "id": "6",
     "picture": "../assets/images/travel-6.jpg",
     "alt": "Warsaw",
-    "name": "Warsaw"
+    "name": "Warsaw",
+    "description": "Warsaw officially the Capital City of Warsaw, is the capital and largest city of Poland."
   },
   {
+    "id": "7",
     "picture": "../assets/images/travel-7.jpg",
     "alt": "Budapest",
-    "name": "Budapest"
+    "name": "Budapest",
+    "description": "It is the ninth-largest city in the European Union by population within city limits and the second-largest city on Danube river;"
   },
   {
+    "id": "8",
     "picture": "../assets/images/travel-8.jpg",
     "alt": "Tbilisi",
-    "name": "Tbilisi"
+    "name": "Tbilisi",
+    "description": "Tbilisi was founded in the 5th century AD by Vakhtang I of Iberia, and since then has served as the capital of various Georgian kingdoms and republics"
   },
   {
+    "id": "9",
     "picture": "../assets/images/travel-9.jpg",
     "alt": "Stockholm",
-    "name": "Stockholm"
+    "name": "Stockholm",
+    "description": "Stockholm is the capital and largest city of Sweden as well as the largest urban area in Scandinavia."
   },
   {
+    "id": "10",
     "picture": "../assets/images/travel-10.jpg",
     "alt": "Naples",
-    "name": "Naples"
+    "name": "Naples",
+    "description": "Naples is a city in Collier County, Florida, United States."
   },
   {
+    "id": "11",
     "picture": "../assets/images/travel-11.jpg",
     "alt": "Riga",
-    "name": "Riga"
+    "name": "Riga",
+    "description": "Riga is the capital and largest city of Latvia and is home to 671,000 inhabitants which is a third of Latvia's population. "
   },
   {
+    "id": "12",
     "picture": "../assets/images/travel-12.jpg",
     "alt": "Zaragoza",
-    "name": "Zaragoza"
+    "name": "Zaragoza",
+    "description": "Zaragoza, also known in English as Saragossa, is the capital city of the Zaragoza Province and of the autonomous community of Aragon, Spain"
   }
 ]

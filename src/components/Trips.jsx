@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {graphql, useStaticQuery} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import { MdLocalAirport } from 'react-icons/md';
+import {MdLocalAirport} from 'react-icons/md';
 
 
 const Trips = () => {
@@ -13,6 +13,7 @@ const Trips = () => {
       node {
         alt
         name
+        description
         picture {
           childImageSharp {
             gatsbyImageData(
@@ -38,25 +39,29 @@ const Trips = () => {
 
     return (
 
-            <TripsContainer>
-                <TripsHead>Locations</TripsHead>
+        <TripsContainer>
+            <TripsHead>Locations</TripsHead>
+            <div>
 
-                <TripsWrap>
-                    {
-                        data.allTripsJson.edges.map(({node}, index) => (
-                                <TripsBoxImg key={index+'img'}>
-                                    {getImageData(node.picture, node.alt)}
-                                    <TripsLocation >
-                                        <MdLocalAirport  style={{marginRight:'5px'}}/>
-                                        {node.name}
-                                    </TripsLocation>
-                                </TripsBoxImg>
-                            )
+            </div>
+
+            <TripsWrap>
+                {
+                    data.allTripsJson.edges.map(({node}, index) => (
+                            <TripsBoxImg key={index + 'img'}>
+                                {getImageData(node.picture, node.alt)}
+                                <TripsLocation>
+                                    <MdLocalAirport style={{marginRight: '5px'}}/>
+                                    {node.name}
+                                </TripsLocation>
+                                <TripsDescription>{node.description}</TripsDescription>
+                            </TripsBoxImg>
                         )
-                    }
+                    )
+                }
 
-                </TripsWrap>
-            </TripsContainer>
+            </TripsWrap>
+        </TripsContainer>
 
     );
 };
@@ -81,8 +86,6 @@ const TripsWrap = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
- 
-
 `;
 const TripsBoxImg = styled.div`
   max-width: 300px;
@@ -100,3 +103,13 @@ const TripsLocation = styled.span`
   padding: 10px;
   color: ${({theme}) => theme.colors.light};
 `;
+
+const TripsDescription = styled.p`
+  background-color: ${({theme}) => theme.colors.secondary};
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: ${({theme}) => theme.colors.light};
+  padding: 10px;
+  min-height: 120px;
+  line-height: 1.5;
+`

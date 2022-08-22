@@ -56,7 +56,8 @@ export const GlobalStyles=createGlobalStyle`
   img {
     max-width: 100%;
     display: block;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   
   article > * + * {
@@ -69,5 +70,7 @@ export const GlobalStyles=createGlobalStyle`
   select {
     font: inherit;
   }
-  
+  .gatsby-image-wrapper-constrained{
+    margin-bottom: 0;
+  }
 `
