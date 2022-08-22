@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from 'gatsby';
 import styled from "styled-components";
 import {GiHamburgerMenu} from 'react-icons/gi';
@@ -40,10 +40,9 @@ const Header = () => {
                 }
             </HeaderNavMenu>
             <HeaderNavBtn>
-                <Button primary={scrolled.toString()} round="true" to='/trips'>Get template</Button>
+                <Button primary={scrolled ? 1 : 0} round="true" to='/trips'>Get template</Button>
             </HeaderNavBtn>
         </HeaderNav>
-
     )
 }
 
@@ -60,11 +59,11 @@ const HeaderNav = styled.header`
   @media (min-width: ${({theme}) => theme.media.wideScreenXl}) {
     justify-content: space-around;
   }
-  
+
 
   &[data-active='true'] {
     background: rgb(152 29 29 / 41%);
-    box-shadow: 0 2px 8px rgba(152,168,188,.2);
+    box-shadow: 0 2px 8px rgba(152, 168, 188, .2);
   }
 `
 

@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import Trips from "./Trips";
 import { ThemeProvider } from 'styled-components'
 import { baseTheme } from './styles/theme'
+import Form from "./Form";
 
 
 const Layout = () => {
@@ -22,6 +23,7 @@ const Layout = () => {
             <main>
                 <Hero/>
                 <Trips/>
+                <Form/>
             </main>
             </ThemeProvider>
         </>

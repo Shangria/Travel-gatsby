@@ -13,8 +13,9 @@ const Hero = () => {
             <HeroContent>
                 <HeroItem>
                     <HeroTitle>Let's do it together.</HeroTitle>
-                    <HeroSubTitle>We travel the world in search of stories.<><br/></> Come along for the ride.</HeroSubTitle>
-                    <Button primary="false" big="true" round="true" to='/trips'>View Latest Posts</Button>
+                    <HeroSubTitle>We travel the world in search of stories.<><br/></>
+                        Come along for the ride.</HeroSubTitle>
+                    <Button primary={false ? 1 : 0} big="false" round="true" to='/trips'>View Latest Posts</Button>
                 </HeroItem>
             </HeroContent>
         </HeroWrap>
@@ -28,7 +29,7 @@ const HeroWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.colors.light};
+  color: ${({theme}) => theme.colors.light};
   height: 100vh;
   position: relative;
 `;
@@ -53,7 +54,8 @@ const VideoHero = styled.video`
 const HeroContent = styled.div`
   z-index: 2;
   padding: 20px;
-  :before{
+
+  :before {
     content: '';
     position: absolute;
     top: 0;
@@ -62,7 +64,7 @@ const HeroContent = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg,rgb(97 105 12) 0%,rgb(132 25 25 / 10%) 0%);;
+    background: linear-gradient(180deg, rgb(97 105 12) 0%, rgb(132 25 25 / 10%) 0%);;
     z-index: -6;
   }
 `;
