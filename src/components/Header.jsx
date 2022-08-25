@@ -40,7 +40,7 @@ const Header = () => {
                 }
             </HeaderNavMenu>
             <HeaderNavBtn>
-                <Button primary={scrolled ? 1 : 0} round="true" to='/trips'>Get template</Button>
+                <Button primary={scrolled ? 1 : 0} round="true" to='/about-trips'>Get template</Button>
             </HeaderNavBtn>
         </HeaderNav>
     )

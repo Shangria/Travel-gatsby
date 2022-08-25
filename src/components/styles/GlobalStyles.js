@@ -1,6 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 
-export const GlobalStyles=createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -8,8 +8,8 @@ export const GlobalStyles=createGlobalStyle`
     font-family: 'DynaPuff';
     line-height: 1.3;
   }
-  
-  html{
+
+  html {
     font-size: 14px;
   }
 
@@ -36,41 +36,43 @@ export const GlobalStyles=createGlobalStyle`
   dd {
     margin: 0;
   }
-  
+
   body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
   }
-  
+
   ul[class],
   ol[class] {
     list-style: none;
   }
-  
+
   a:not([class]) {
     text-decoration-skip-ink: auto;
   }
-  
+
   img {
     max-width: 100%;
     display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
   }
-  
+
   article > * + * {
     margin-top: 1em;
   }
-  
+
   input,
   button,
   textarea,
   select {
     font: inherit;
   }
-  .gatsby-image-wrapper-constrained{
+  
+  
+
+  .gatsby-image-wrapper-constrained {
     margin-bottom: 0;
   }
 `

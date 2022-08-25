@@ -1,68 +1,32 @@
 import React from 'react';
 import styled from "styled-components";
-import {graphql, useStaticQuery} from "gatsby";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import {MdLocalAirport} from 'react-icons/md';
 
 
-const Trips = () => {
-    const data = useStaticQuery(graphql`
-  query TripsQuery {
-  allTripsJson {
-    edges {
-      node {
-        alt
-        name
-        description
-        picture {
-          childImageSharp {
-            gatsbyImageData(
-              formats: JPG
-              blurredOptions: {width: 100}
-              width: 300
-              placeholder: BLURRED
-              transformOptions: {cropFocus: CENTER}
-              aspectRatio: 0.7
-            )
-          }
-        }
-      }
-    }
-  }
-}
-`)
-
-    function getImageData(img, alt) {
-        const image = getImage(img)
-        return <GatsbyImage image={image} alt={alt}/>
-    }
-
+const Trips = ({data}) => {
     return (
-
         <TripsContainer>
             <TripsHead>Locations</TripsHead>
-            <div>
-
-            </div>
-
             <TripsWrap>
                 {
-                    data.allTripsJson.edges.map(({node}, index) => (
-                            <TripsBoxImg key={index + 'img'}>
-                                {getImageData(node.picture, node.alt)}
-                                <TripsLocation>
-                                    <MdLocalAirport style={{marginRight: '5px'}}/>
-                                    {node.name}
-                                </TripsLocation>
-                                <TripsDescription>{node.description}</TripsDescription>
-                            </TripsBoxImg>
-                        )
+                    data.map((trip, index) => {
+                            const image = getImage(trip.node.picture)
+                            return (
+                                <TripsBoxImg key={index + 'img'}>
+                                    <GatsbyImage image={image} alt={trip.node.alt}/>
+                                    <TripsLocation>
+                                        <MdLocalAirport style={{marginRight: '5px'}}/>
+                                        {trip.node.name}
+                                    </TripsLocation>
+                                </TripsBoxImg>
+                            )
+                        }
                     )
                 }
 
             </TripsWrap>
         </TripsContainer>
-
     );
 };
 
@@ -90,8 +54,7 @@ const TripsWrap = styled.div`
 const TripsBoxImg = styled.div`
   max-width: 300px;
   width: 100%;
-  margin: 0 20px;
-  margin-bottom: 20px;
+  margin: 0 20px 20px 0;
   position: relative;
 `;
 const TripsLocation = styled.span`
@@ -103,13 +66,3 @@ const TripsLocation = styled.span`
   padding: 10px;
   color: ${({theme}) => theme.colors.light};
 `;
-
-const TripsDescription = styled.p`
-  background-color: ${({theme}) => theme.colors.secondary};
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: ${({theme}) => theme.colors.light};
-  padding: 10px;
-  min-height: 120px;
-  line-height: 1.5;
-`

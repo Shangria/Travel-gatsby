@@ -1,18 +1,10 @@
 export const menuInformation = [
     {
-        name: "About Us",
-        link: "/about"
+        name: "Home",
+        link: "/"
     },
     {
         name: "Trips",
-        link: "/trips"
-    },
-    {
-        name: "Careers",
-        link: "/careers"
-    },
-    {
-        name: "Contact",
-        link: "/contact"
+        link: "/about-trips"
     },
 ]
