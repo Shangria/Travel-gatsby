@@ -70,7 +70,6 @@ export const GlobalStyles = createGlobalStyle`
     font: inherit;
   }
   
-  
 
   .gatsby-image-wrapper-constrained {
     margin-bottom: 0;
