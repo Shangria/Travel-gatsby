@@ -38,9 +38,9 @@ const TripsContainer = styled.div`
   padding: 40px 15px;
 `;
 const TripsHead = styled.h2`
-  font-size: calc(1.3rem + 2vw);
+  font-size: calc(1rem + 2vw);
   text-align: center;
-  color: ${({theme}) => theme.colors.fourth};
+  color: ${({theme}) => theme.colors.primary};
   margin-bottom: 20px;
   font-weight: 400;
 }

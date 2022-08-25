@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {Button} from "./Button";
 import Video from '../assets/videos/video2.mp4';
 
 
@@ -15,7 +14,6 @@ const Hero = () => {
                     <HeroTitle>Let's do it together.</HeroTitle>
                     <HeroSubTitle>We travel the world in search of stories.<><br/></>
                         Come along for the ride.</HeroSubTitle>
-                    <Button primary={false ? 1 : 0} big="false" round="true" to='/trips'>View Latest Posts</Button>
                 </HeroItem>
             </HeroContent>
         </HeroWrap>

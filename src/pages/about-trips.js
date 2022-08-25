@@ -3,11 +3,13 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import TripsInformation from "../components/TripsInformation";
 import {graphql} from "gatsby";
+import TripsBg from "../components/TripsBg";
 
 const AboutTrips = ({data}) => {
     return (
         <Layout>
-            <TripsInformation data={data.allTripsJson.nodes}/>
+            <TripsBg/>
+            <TripsInformation dataTrips={data.allTripsJson.nodes}/>
         </Layout>
     );
 };
@@ -24,6 +26,7 @@ export const aboutTripsQuery = graphql`
       name
       id
       description
+      price
       picture {
         childImageSharp {
           gatsbyImageData(

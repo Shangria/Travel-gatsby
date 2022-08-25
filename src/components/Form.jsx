@@ -132,7 +132,7 @@ const FormButton = styled.button`
   background: ${({theme}) => theme.colors.primary};
   padding: 10px 30px;
   color: ${({theme}) => theme.colors.five};
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.6rem + 1vw);
   outline: none;
   border: none;
   min-width: 100px;

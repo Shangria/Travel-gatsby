@@ -6,7 +6,7 @@ import { baseTheme } from './styles/theme'
 export const Button = styled(Link)`
   background: ${({primary}) => (primary ? baseTheme.colors.bg : baseTheme.colors.secondary)};
   padding: ${({big}) => (big ? '15px 40px' : '10px 30px')};
-  color: ${baseTheme.colors.five};
+  color: ${baseTheme.colors.light};
   font-size:${({big}) => (big ? 'calc(0.7rem + 1vw)' : '18px')}; 
   outline: none;
   border: none;
