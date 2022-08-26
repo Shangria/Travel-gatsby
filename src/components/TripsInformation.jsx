@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import Select from "./Select";
 import InputSearch from "./InputSearch";
+import {ImPriceTags} from 'react-icons/im';
 
 
 const TripsInformation = ({dataTrips}) => {
@@ -37,7 +38,7 @@ const TripsInformation = ({dataTrips}) => {
                     <Select
                         value={tripsSort}
                         onChange={sortTripsData}
-                        defaultValue="Sort out trips"
+                        defaultValue="Sort our trips"
                         options={[
                             {value: "name", name: "Sort for name city"},
                             {value: "price", name: "Sort for price"},
@@ -66,7 +67,7 @@ const TripsInformation = ({dataTrips}) => {
                                             {trip.description}
                                         </InformationText>
                                         <InformationPrice>
-                                            {trip.price}
+                                           Price  <ImPriceTags/>  {trip.price}
                                         </InformationPrice>
                                     </InformationBox>
                                 </InformationItem>

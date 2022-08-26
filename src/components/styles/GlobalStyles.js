@@ -72,6 +72,6 @@ export const GlobalStyles = createGlobalStyle`
   
 
   .gatsby-image-wrapper-constrained {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 `

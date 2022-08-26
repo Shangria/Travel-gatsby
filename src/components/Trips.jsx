@@ -2,9 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import {MdLocalAirport} from 'react-icons/md';
+import Weather from "./Weather";
 
 
 const Trips = ({data}) => {
+
     return (
         <TripsContainer>
             <TripsHead>Locations</TripsHead>
@@ -19,6 +21,7 @@ const Trips = ({data}) => {
                                         <MdLocalAirport style={{marginRight: '5px'}}/>
                                         {trip.node.name}
                                     </TripsLocation>
+                                        <Weather city={trip.node.name}/>
                                 </TripsBoxImg>
                             )
                         }

@@ -27,6 +27,12 @@ const Header = () => {
         };
     }, [scrolled]);
 
+
+    useEffect(() => {
+        const body = document.querySelector('body');
+        body.style.overflow = openMenu ? 'hidden' : 'auto';
+    }, [openMenu])
+
     const menuToggle = () => {
         setOpenMenu(openMenu => !openMenu);
     }
@@ -50,8 +56,7 @@ const Header = () => {
                 }
             </HeaderNavMenu>
             <HeaderNavBtn>
-                <Button primary={scrolled ? 1 : 0} round="true" to='/about-trips'>Get
-                    template</Button>
+                <Button primary={scrolled ? 1 : 0} round="true" to='/about-trips'>Get more information</Button>
             </HeaderNavBtn>
         </HeaderNav>
     )
@@ -66,7 +71,7 @@ const HeaderNav = styled.header`
   z-index: 5;
   position: fixed;
   width: 100%;
-  
+
   @media (min-width: ${({theme}) => theme.media.wideScreenXl}) {
     justify-content: space-around;
   }
@@ -84,7 +89,7 @@ const HeaderNavLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   font-size: ${({fontSize}) => (fontSize ? fontSize : '40px')};
-  
+
   @media (max-width: ${({theme}) => theme.media.desktopMin}) {
     :not(:last-child) {
       margin-bottom: 20px;
@@ -94,7 +99,7 @@ const HeaderNavLink = styled(Link)`
 
   @media (min-width: ${({theme}) => theme.media.desktopMin}) {
     font-size: ${({fontSize}) => (fontSize ? fontSize : '20px')};
-    
+
     :not(:last-child) {
       margin-right: 40px;
     }
