@@ -1,6 +1,7 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
 import styled from "styled-components";
+import emailjs from '@emailjs/browser';
 
 
 const Form = () => {
@@ -14,7 +15,16 @@ const Form = () => {
     });
 
     const onSubmit = (data) => {
-        console.log(JSON.stringify(data))
+        emailjs
+            .send("service_w4d8lab", "template_0rydxtl", data, "91BfrceY5JViKcJKU")
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
         reset();
     }
 

@@ -33,5 +33,13 @@ module.exports = {
         path: `src/data/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['DynaPuff']
+        }
+      }
+    },
   ],
 }

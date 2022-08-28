@@ -4,6 +4,8 @@ import styled from "styled-components";
 const Weather = ({city}) => {
     const [weatherData, setWeatherData] = useState({});
 
+
+
     const fetchData = useCallback(() => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=eabbdd64dec38ae789100e459c50dc68&units=metric`
         )
@@ -15,7 +17,6 @@ const Weather = ({city}) => {
             })
             .catch((err) => console.error(err));
     }, [city]);
-
 
     useEffect(() => {
         fetchData()

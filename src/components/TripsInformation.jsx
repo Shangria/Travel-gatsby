@@ -7,7 +7,7 @@ import {ImPriceTags} from 'react-icons/im';
 
 
 const TripsInformation = ({dataTrips}) => {
-    const [trips, setTrips] = useState(dataTrips);
+    const [trips] = useState(dataTrips);
     const [tripsSort, setTripsSort] = useState('');
     const [searchData, setSearchData] = useState('');
 

@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: 'DynaPuff';
+    font-family: "DynaPuff", cursive;
     line-height: 1.3;
   }
 
