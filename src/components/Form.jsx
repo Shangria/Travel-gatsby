@@ -2,6 +2,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
+import {motion} from "framer-motion";
 
 
 const Form = () => {
@@ -33,7 +34,10 @@ const Form = () => {
             <FormTitle>Stay in Touch</FormTitle>
             <FormBox onSubmit={handleSubmit(onSubmit)}>
                 <FormLabel>
-                    <FormInput placeholder="First name" {...register("firstName", {
+                    <FormInput as={motion.input}
+                               whileFocus={{ scale: 1.1 }}
+                               whileTap={{ scale: 0.5 }}
+                        placeholder="First name" {...register("firstName", {
                         required: "Do you have another try:)",
                         minLength: {
                             value: 5,
@@ -46,7 +50,11 @@ const Form = () => {
                 </FormLabel>
 
                 <FormLabel>
-                    <FormInput placeholder="Last name" {...register("lastName", {
+                    <FormInput
+                        as={motion.input}
+                        whileFocus={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.5 }}
+                        placeholder="Last name" {...register("lastName", {
                         required: "Do you have another try:)",
                         minLength: {
                             value: 5,
@@ -58,7 +66,11 @@ const Form = () => {
                 </FormLabel>
 
                 <FormLabel>
-                    <FormInput placeholder="Email" {...register("email", {
+                    <FormInput
+                        as={motion.input}
+                        whileFocus={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.5 }}
+                        placeholder="Email" {...register("email", {
                         required: "Do you have another try:)",
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,

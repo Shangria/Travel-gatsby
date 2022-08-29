@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import {MdLocalAirport} from 'react-icons/md';
 import Weather from "./Weather";
+import {motion} from 'framer-motion';
 
 
 const Trips = ({data}) => {
@@ -15,7 +16,12 @@ const Trips = ({data}) => {
                     data.map((trip, index) => {
                             const image = getImage(trip.node.picture)
                             return (
-                                <TripsBoxImg key={index + 'img'}>
+                                <TripsBoxImg as={motion.div}
+                                             whileHover={{scale:1.1}}
+                                             whileInView={{ opacity: 1 }}
+                                             viewport={{ once: true }}
+                                             key={index + 'img'}
+                                >
                                     <GatsbyImage image={image} alt={trip.node.alt}/>
                                     <TripsLocation>
                                         <MdLocalAirport style={{marginRight: '5px'}}/>

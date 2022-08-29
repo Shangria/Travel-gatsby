@@ -4,6 +4,7 @@ import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import Select from "./Select";
 import InputSearch from "./InputSearch";
 import {ImPriceTags} from 'react-icons/im';
+import {motion} from 'framer-motion';
 
 
 const TripsInformation = ({dataTrips}) => {
@@ -57,7 +58,12 @@ const TripsInformation = ({dataTrips}) => {
                     sortedAndSearchTrips.map((trip, index) => {
                             const image = getImage(trip.picture)
                             return (
-                                <InformationItem key={index}>
+                                <InformationItem
+                                    as={motion.div}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    key={index}>
                                     <GatsbyImage image={image} alt={trip.alt}/>
                                     <InformationBox>
                                         <InformationTitle>

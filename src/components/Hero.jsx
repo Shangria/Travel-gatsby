@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import Video from '../assets/videos/video2.mp4';
 
-
 const Hero = () => {
     return (
         <HeroWrap>
@@ -66,7 +65,6 @@ const HeroContent = styled.div`
     z-index: -6;
   }
 `;
-
 
 const HeroItem = styled.div`
   display: flex;
