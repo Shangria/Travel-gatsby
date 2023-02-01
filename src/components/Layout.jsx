@@ -9,6 +9,7 @@ import Footer from "./Footer";
 
 
 const Layout = ({children}) => {
+    console.log('test')
     return (
         <ThemeProvider theme={baseTheme}>
             <Seo title='Home'/>
